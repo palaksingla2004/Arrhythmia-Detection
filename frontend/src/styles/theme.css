@@ -1,0 +1,266 @@
+:root {
+  --bg: #eef4f8;
+  --bg-2: #dce9f2;
+  --panel: #ffffff;
+  --ink: #12314f;
+  --ink-soft: #4d677f;
+  --accent: #0f6cab;
+  --accent-2: #2d8f85;
+  --danger: #c43d2d;
+  --ok: #1b8e55;
+  --shadow: 0 18px 30px rgba(24, 53, 83, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(34, 128, 173, 0.2), transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(31, 146, 104, 0.18), transparent 40%),
+    linear-gradient(130deg, var(--bg), var(--bg-2));
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 18px 48px;
+}
+
+.hero {
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.hero p {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(19, 70, 110, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(4px);
+}
+
+.input-card,
+.chart-card,
+.report-card {
+  margin-bottom: 16px;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 14px;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(16, 56, 87, 0.2);
+  padding: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  resize: vertical;
+}
+
+.input-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+button,
+.file-btn {
+  border: 0;
+  border-radius: 12px;
+  background: #d4e5f3;
+  color: #103960;
+  font-weight: 600;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover,
+.file-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(24, 53, 83, 0.14);
+}
+
+button.primary {
+  background: linear-gradient(135deg, var(--accent), #1a9ac0);
+  color: white;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+.file-btn {
+  position: relative;
+  text-align: center;
+}
+
+.file-btn input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.input-meta {
+  color: var(--ink-soft);
+  margin: 10px 0 0;
+}
+
+.error-text {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.status-card h2 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.status-sub {
+  margin: 8px 0 0;
+  color: var(--ink-soft);
+}
+
+.status-normal {
+  border-left: 6px solid var(--ok);
+}
+
+.status-alert {
+  border-left: 6px solid var(--danger);
+}
+
+.gauge-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.gauge {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.gauge-inner {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  background: white;
+  display: grid;
+  place-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  color: var(--ink);
+}
+
+.breakdown-list {
+  display: grid;
+  gap: 10px;
+}
+
+.breakdown-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.progress-track {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: #d8e3ed;
+}
+
+.progress-fill {
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #1f8d8a, #1a65a3);
+}
+
+.chart-wrap {
+  margin-top: 8px;
+}
+
+.mini-stats {
+  color: var(--ink-soft);
+}
+
+.warning-box {
+  margin-top: 12px;
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(196, 61, 45, 0.1);
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.ok-box {
+  margin-top: 12px;
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(27, 142, 85, 0.12);
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.report-row {
+  display: flex;
+  gap: 10px;
+}
+
+.report-row input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid rgba(16, 56, 87, 0.2);
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .input-row,
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  .gauge {
+    width: 170px;
+    height: 170px;
+  }
+
+  .gauge-inner {
+    width: 120px;
+    height: 120px;
+  }
+}
+

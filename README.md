@@ -80,6 +80,63 @@ Direct modes:
 
 `train-lite` is optimized for laptops (tiny dataset, low thread count, below-normal process priority).
 
+## 📂 Dataset Setup (Required)
+
+This project requires external ECG datasets.  
+You must **download them manually** and place them in a `Datasets/` folder.
+
+---
+
+### 🔽 Download Datasets
+
+- ECG Arrhythmia Classification Dataset  
+  https://www.kaggle.com/datasets/sadmansakib7/ecg-arrhythmia-classification-dataset/data  
+
+- PTB-XL ECG Dataset  
+  https://www.kaggle.com/datasets/khyeh0719/ptb-xl-dataset/suggestions  
+
+- ECG Heartbeat Categorization Dataset (MIT-BIH)  
+  https://www.kaggle.com/datasets/shayanfazeli/heartbeat/data?select=mitbih_train.csv  
+
+- MIT-BIH Arrhythmia Database (Modern 2023)  
+  https://www.kaggle.com/datasets/protobioengineering/mit-bih-arrhythmia-database-modern-2023  
+
+---
+
+### 📁 Folder Setup
+
+Create this folder:
+
+
+Datasets/
+
+
+Place all dataset files inside it.
+
+Example structure:
+
+
+Datasets/
+├── mitbih_train.csv
+├── mitbih_test.csv
+├── ptbdb_normal.csv
+├── ptbdb_abnormal.csv
+├── PTB-XL/
+├── MIT-BIH Arrhythmia Database.csv
+├── INCART 2-lead Arrhythmia Database.csv
+├── Sudden Cardiac Death Holter Database.csv
+
+
+---
+
+### ⚠️ Important Notes
+
+- Do **NOT rename files** unless required
+- Extract all `.zip` files
+- Keep PTB-XL folder structure intact
+- First run may take time (dataset preprocessing)
+---
+
 ## Notes
 
 - Dataset unification includes:

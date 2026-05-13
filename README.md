@@ -1,3 +1,8 @@
+Palak Singla(2210990994), Rajat Sharma(2210990707), Pareen Khirbat(2210990639)
+Project Title:- ECG Arrhythmia Detection System Using CNN
+Research Paper Status:- Pending
+
+
 # Full-Stack ECG Arrhythmia Detection System
 
 This project provides an end-to-end arrhythmia detection stack with:
